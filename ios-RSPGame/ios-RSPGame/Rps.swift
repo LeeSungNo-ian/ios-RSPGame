@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum Rps {
+    case rock
+    case paper
+    case scissors
+}
