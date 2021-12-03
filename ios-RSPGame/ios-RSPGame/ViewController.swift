@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
-        sender.currentTitle
+        guard let title = sender.currentTitle else { return }
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
