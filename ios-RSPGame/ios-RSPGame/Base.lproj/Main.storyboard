@@ -100,6 +100,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="가위">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipZ-P5-dC2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ise-zK-WDD">
                                         <rect key="frame" x="128" y="0.0" width="118" height="118"/>
@@ -109,6 +112,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="바위">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pnk-Qi-bo9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZW-yZ-qxH">
                                         <rect key="frame" x="256" y="0.0" width="118" height="118"/>
@@ -118,6 +124,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="보">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tv5-67-Ehf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -129,12 +138,18 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="RESET"/>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oul-2D-wW8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcg-pT-pWZ">
                                         <rect key="frame" x="192" y="0.0" width="182" height="35"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="RESET"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SELECT"/>
+                                        <connections>
+                                            <action selector="selectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6GR-Sk-cIR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -158,6 +173,13 @@
                             <constraint firstItem="FFc-PC-t4b" firstAttribute="top" secondItem="Wrj-xB-K6a" secondAttribute="bottom" constant="40" id="yO4-Pa-0yi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="comChoiceLabel" destination="7aK-He-4RW" id="zdD-oG-s32"/>
+                        <outlet property="comImageView" destination="Eqy-5S-yXZ" id="p7T-CZ-6j4"/>
+                        <outlet property="mainLabel" destination="ayy-Gd-lpJ" id="BeF-IO-6Yd"/>
+                        <outlet property="myChoiceLabel" destination="cKA-zd-E9l" id="Vqb-J2-RPp"/>
+                        <outlet property="myImageView" destination="r7Y-HU-qdM" id="Jw8-VD-hTX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
