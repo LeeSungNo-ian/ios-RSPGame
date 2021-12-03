@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var comChoiceLabel: UILabel!
     @IBOutlet weak var myChoiceLabel: UILabel!
     
+    var myChoice: Rps = Rps.rock
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,18 @@ class ViewController: UIViewController {
 
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
         guard let title = sender.currentTitle else { return }
+        print(title)
+        
+        switch title {
+        case "가위":
+            myChoice = Rps.scissors
+        case "바위":
+            myChoice = Rps.rock
+        case "보":
+            myChoice = Rps.paper
+        default:
+            break
+        }
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
