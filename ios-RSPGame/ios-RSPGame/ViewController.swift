@@ -20,8 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+
+        comImageView.image = #imageLiteral(resourceName: "ready")
+        myImageView.image = #imageLiteral(resourceName: "ready")
         
     }
 
