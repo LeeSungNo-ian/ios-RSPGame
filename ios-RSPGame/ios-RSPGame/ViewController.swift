@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         comImageView.image = #imageLiteral(resourceName: "ready")
         myImageView.image = #imageLiteral(resourceName: "ready")
         
+        comChoiceLabel.text = "준비 중 입니다!"
+        myChoiceLabel.text = "준비 중 입니다!"
+        
     }
 
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
