@@ -87,6 +87,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
+        comImageView.image = #imageLiteral(resourceName: "ready")
+        myImageView.image = #imageLiteral(resourceName: "ready")
+        
+        comChoiceLabel.text = "준비 중 입니다!"
+        myChoiceLabel.text = "준비 중 입니다!"
+        
+        mainLabel.text = "선택하세요 !"
     }
     
 
