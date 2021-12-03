@@ -61,7 +61,29 @@ class ViewController: UIViewController {
             comChoiceLabel.text = "보"
         }
         
+        switch myChoice {
+        case Rps.rock:
+            myImageView.image = #imageLiteral(resourceName: "rock")
+            myChoiceLabel.text = "바위"
+        case Rps.scissors:
+            myImageView.image = #imageLiteral(resourceName: "scissors")
+            myChoiceLabel.text = "가위"
+        case Rps.paper:
+            myImageView.image = #imageLiteral(resourceName: "paper")
+            myChoiceLabel.text = "보"
+        }
         
+        if comChoice == myChoice {
+            mainLabel.text = "비겼어요 !"
+        } else if comChoice == .rock && myChoice == .paper {
+            mainLabel.text = "이겼어요 !"
+        } else if comChoice == .paper && myChoice == .scissors {
+            mainLabel.text = "이겼어요 !"
+        } else if comChoice == .scissors && myChoice == .rock {
+            mainLabel.text = "이겼어요 !"
+        } else {
+            mainLabel.text = "졌네요.."
+        }
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
