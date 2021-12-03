@@ -52,10 +52,13 @@ class ViewController: UIViewController {
         switch comChoice {
         case Rps.rock:
             comImageView.image = #imageLiteral(resourceName: "rock")
+            comChoiceLabel.text = "바위"
         case Rps.scissors:
             comImageView.image = #imageLiteral(resourceName: "scissors")
+            comChoiceLabel.text = "가위"
         case Rps.paper:
             comImageView.image = #imageLiteral(resourceName: "paper")
+            comChoiceLabel.text = "보"
         }
         
         
