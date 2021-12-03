@@ -29,11 +29,10 @@ class ViewController: UIViewController {
         
         comChoiceLabel.text = "준비 중 입니다!"
         myChoiceLabel.text = "준비 중 입니다!"
-        
     }
 
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle else { return }
+        let title = sender.currentTitle!
         print(title)
         
         switch title {
@@ -94,8 +93,8 @@ class ViewController: UIViewController {
         myChoiceLabel.text = "준비 중 입니다!"
         
         mainLabel.text = "선택하세요 !"
+        
+        comChoice = Rps(rawValue: Int.random(in: 0...2))!
     }
-    
-
 }
 
