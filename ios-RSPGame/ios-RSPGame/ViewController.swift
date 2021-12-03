@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
+        sender.currentTitle
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
