@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     
     var myChoice: Rps = Rps.rock
     
+    var comChoice: Rps = Rps(rawValue: Int.random(in: 0...2))!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,6 +49,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
+        switch comChoice {
+        case Rps.rock:
+            comImageView.image = #imageLiteral(resourceName: "rock")
+        case Rps.scissors:
+            comImageView.image = #imageLiteral(resourceName: "scissors")
+        case Rps.paper:
+            comImageView.image = #imageLiteral(resourceName: "paper")
+        }
+        
+        
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
