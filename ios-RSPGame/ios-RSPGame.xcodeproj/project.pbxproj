@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C951F07275B9CA1000093EA /* Rsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C951F06275B9CA1000093EA /* Rsp.swift */; };
 		3CAE6A2B2757BAA100F20BCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE6A2A2757BAA100F20BCB /* AppDelegate.swift */; };
 		3CAE6A2D2757BAA100F20BCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE6A2C2757BAA100F20BCB /* SceneDelegate.swift */; };
 		3CAE6A2F2757BAA100F20BCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE6A2E2757BAA100F20BCB /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C951F06275B9CA1000093EA /* Rsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rsp.swift; sourceTree = "<group>"; };
 		3CAE6A272757BAA100F20BCB /* ios-RSPGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-RSPGame.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAE6A2A2757BAA100F20BCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CAE6A2C2757BAA100F20BCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				3CAE6A2A2757BAA100F20BCB /* AppDelegate.swift */,
 				3CAE6A2C2757BAA100F20BCB /* SceneDelegate.swift */,
 				3CAE6A2E2757BAA100F20BCB /* ViewController.swift */,
+				3C951F06275B9CA1000093EA /* Rsp.swift */,
 				3CAE6A302757BAA100F20BCB /* Main.storyboard */,
 				3CAE6A332757BAA200F20BCB /* Assets.xcassets */,
 				3CAE6A352757BAA200F20BCB /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CAE6A2F2757BAA100F20BCB /* ViewController.swift in Sources */,
+				3C951F07275B9CA1000093EA /* Rsp.swift in Sources */,
 				3CAE6A2B2757BAA100F20BCB /* AppDelegate.swift in Sources */,
 				3CAE6A2D2757BAA100F20BCB /* SceneDelegate.swift in Sources */,
 			);
