@@ -28,6 +28,16 @@ class ViewController: UIViewController {
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
         guard let title = sender.currentTitle else { return }
         
+        switch title {
+        case "가위":
+            Rsp.scissors
+        case "바위":
+            Rsp.rock
+        case "보":
+            Rsp.paper
+        default:
+            break
+        }
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
