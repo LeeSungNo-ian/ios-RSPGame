@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     @IBAction func resetButtonTapped(_ sender: UIButton) {
     }
     
+    @IBAction func selectButtonTapped(_ sender: UIButton) {
+    }
     
     
     

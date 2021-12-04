@@ -156,6 +156,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="SELECT">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="selectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLt-iC-hZF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
