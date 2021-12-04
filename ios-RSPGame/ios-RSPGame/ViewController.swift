@@ -44,7 +44,17 @@ class ViewController: UIViewController {
     
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        
+        switch comPick {
+        case .paper:
+            comChoiceImage.image = #imageLiteral(resourceName: "paper")
+            comChoicePick.text = "보 !"
+        case .rock:
+            comChoiceImage.image = #imageLiteral(resourceName: "rock")
+            comChoicePick.text = "묵 !"
+        case .scissors:
+            comChoiceImage.image = #imageLiteral(resourceName: "scissors")
+            comChoicePick.text = "가위 !"
+        }
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
