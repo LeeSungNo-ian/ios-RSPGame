@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        comChoicePick.text = "준비 중 🤯"
+        myChoicePick.text = "준비 중 🤯"
     }
     
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
