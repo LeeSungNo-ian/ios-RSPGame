@@ -96,8 +96,8 @@
                                             <constraint firstAttribute="width" constant="104.5" id="Es9-63-63o"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="가위"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="가위"/>
                                         <connections>
                                             <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rb-dU-f1U"/>
                                         </connections>
@@ -109,8 +109,8 @@
                                             <constraint firstAttribute="width" constant="105" id="paz-LK-V2j"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="바위"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="바위"/>
                                         <connections>
                                             <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nmk-aj-e0H"/>
                                         </connections>
@@ -122,8 +122,8 @@
                                             <constraint firstAttribute="width" constant="104.5" id="3iY-Wp-Nir"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="보"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="보"/>
                                         <connections>
                                             <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jWT-kY-Cpj"/>
                                         </connections>
