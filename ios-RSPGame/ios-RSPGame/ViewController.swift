@@ -42,7 +42,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func selectButtonTapped(_ sender: UIButton) {
         switch comPick {
         case .rock:
@@ -100,11 +99,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
+        comChoicePick.text = "준비 중 🤯"
+        myChoicePick.text = "준비 중 🤯"
         
+        comChoiceImage.image = #imageLiteral(resourceName: "ready")
+        myChoiceImage.image = #imageLiteral(resourceName: "ready")
+        
+        mainLabel.text = "선택하세요 !"
     }
-    
-    
-    
-    
 }
 
