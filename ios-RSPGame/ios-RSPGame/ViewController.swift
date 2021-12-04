@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myChoicePick: UILabel!
     
     var myPick: Rsp = Rsp.paper
+    var comPick: Rsp = Rsp(rawValue: Int.random(in: 0...2))!
     
     override func viewDidLoad() {
         super.viewDidLoad()
