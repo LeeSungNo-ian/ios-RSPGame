@@ -31,22 +31,24 @@ class ViewController: UIViewController {
         
         switch title {
         case "가위":
-            Rsp.scissors
+            myPick = Rsp.scissors
         case "바위":
-            Rsp.rock
+            myPick = Rsp.rock
         case "보":
-            Rsp.paper
+            myPick = Rsp.paper
         default:
             break
         }
     }
     
-    @IBAction func resetButtonTapped(_ sender: UIButton) {
-    }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
+        
     }
     
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        
+    }
     
     
     
