@@ -98,6 +98,9 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="가위"/>
+                                        <connections>
+                                            <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rb-dU-f1U"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEB-tp-mvH">
                                         <rect key="frame" x="134.5" y="0.0" width="105" height="45"/>
