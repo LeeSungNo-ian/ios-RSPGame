@@ -45,15 +45,27 @@ class ViewController: UIViewController {
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
         switch comPick {
-        case .paper:
-            comChoiceImage.image = #imageLiteral(resourceName: "paper")
-            comChoicePick.text = "보 !"
         case .rock:
             comChoiceImage.image = #imageLiteral(resourceName: "rock")
             comChoicePick.text = "묵 !"
         case .scissors:
             comChoiceImage.image = #imageLiteral(resourceName: "scissors")
             comChoicePick.text = "가위 !"
+        case .paper:
+            comChoiceImage.image = #imageLiteral(resourceName: "paper")
+            comChoicePick.text = "보 !"
+        }
+        
+        switch myPick {
+        case .rock:
+            myChoiceImage.image = #imageLiteral(resourceName: "rock")
+            myChoicePick.text = "묵 !"
+        case .scissors:
+            myChoiceImage.image = #imageLiteral(resourceName: "scissors")
+            myChoicePick.text = "가위 !"
+        case .paper:
+            myChoiceImage.image = #imageLiteral(resourceName: "paper")
+            myChoicePick.text = "보 !"
         }
     }
     
