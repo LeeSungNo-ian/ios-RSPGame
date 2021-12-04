@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mainLabel: UILabel!
     
+    @IBOutlet weak var comChoiceImage: UIImageView!
+    @IBOutlet weak var myChoiceImage: UIImageView!
     
     
     override func viewDidLoad() {

@@ -168,7 +168,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="comChoiceImage" destination="O4Q-a3-r6I" id="Xbd-NA-2MY"/>
                         <outlet property="mainLabel" destination="b0W-3W-1va" id="b17-as-Dz0"/>
+                        <outlet property="myChoiceImage" destination="nWH-gn-um3" id="b3X-O6-hFJ"/>
                     </connections>
                 </viewController>
             </objects>
