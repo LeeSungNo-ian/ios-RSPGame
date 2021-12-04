@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         case .paper:
             myChoiceImage.image = #imageLiteral(resourceName: "paper")
             myChoicePick.text = "보 !"
-        }
+        }        
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
