@@ -66,7 +66,37 @@ class ViewController: UIViewController {
         case .paper:
             myChoiceImage.image = #imageLiteral(resourceName: "paper")
             myChoicePick.text = "보 !"
-        }        
+        }
+        
+        switch myPick {
+        case .rock:
+            switch comPick {
+            case .rock:
+                mainLabel.text = GameResult.draw.rawValue
+            case .scissors:
+                mainLabel.text = GameResult.win.rawValue
+            case .paper:
+                mainLabel.text = GameResult.lose.rawValue
+            }
+        case .scissors:
+            switch comPick {
+            case .rock:
+                mainLabel.text = GameResult.lose.rawValue
+            case .scissors:
+                mainLabel.text = GameResult.draw.rawValue
+            case .paper:
+                mainLabel.text = GameResult.win.rawValue
+            }
+        case .paper:
+            switch comPick {
+            case .rock:
+                mainLabel.text = GameResult.win.rawValue
+            case .scissors:
+                mainLabel.text = GameResult.lose.rawValue
+            case .paper:
+                mainLabel.text = GameResult.draw.rawValue
+            }
+        }
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
