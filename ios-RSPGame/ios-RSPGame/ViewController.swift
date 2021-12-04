@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
-        let title = sender.currentTitle!
+        guard let title = sender.currentTitle else { return }
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
