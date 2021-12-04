@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var comChoicePick: UILabel!
     @IBOutlet weak var myChoicePick: UILabel!
     
+    var myPick: Rsp = Rsp.paper
     
     override func viewDidLoad() {
         super.viewDidLoad()
