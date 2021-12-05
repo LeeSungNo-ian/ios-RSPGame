@@ -184,10 +184,10 @@
                     </view>
                     <connections>
                         <outlet property="comChoiceImage" destination="O4Q-a3-r6I" id="Xbd-NA-2MY"/>
-                        <outlet property="comChoicePick" destination="8tJ-MI-r37" id="Ee9-9D-6lk"/>
+                        <outlet property="comChoiceLabel" destination="8tJ-MI-r37" id="Ee9-9D-6lk"/>
                         <outlet property="mainLabel" destination="b0W-3W-1va" id="b17-as-Dz0"/>
                         <outlet property="myChoiceImage" destination="nWH-gn-um3" id="b3X-O6-hFJ"/>
-                        <outlet property="myChoicePick" destination="fXR-5z-uDu" id="d2i-GK-6zB"/>
+                        <outlet property="myChoiceLabel" destination="fXR-5z-uDu" id="d2i-GK-6zB"/>
                     </connections>
                 </viewController>
             </objects>

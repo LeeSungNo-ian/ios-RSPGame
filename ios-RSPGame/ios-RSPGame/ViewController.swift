@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var comChoiceImage: UIImageView!
     @IBOutlet weak var myChoiceImage: UIImageView!
     
-    @IBOutlet weak var comChoicePick: UILabel!
-    @IBOutlet weak var myChoicePick: UILabel!
+    @IBOutlet weak var comChoiceLabel: UILabel!
+    @IBOutlet weak var myChoiceLabel: UILabel!
     
     var myPick: HandShape = HandShape.paper
     var comPick: HandShape = HandShape(rawValue: Int.random(in: 0...2))!
@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        comChoicePick.text = "준비 중 🤯"
-        myChoicePick.text = "준비 중 🤯"
+        comChoiceLabel.text = "준비 중 🤯"
+        myChoiceLabel.text = "준비 중 🤯"
     }
     
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
@@ -46,25 +46,25 @@ class ViewController: UIViewController {
         switch comPick {
         case .rock:
             comChoiceImage.image = #imageLiteral(resourceName: "rock")
-            comChoicePick.text = "묵 !"
+            comChoiceLabel.text = "묵 !"
         case .scissors:
             comChoiceImage.image = #imageLiteral(resourceName: "scissors")
-            comChoicePick.text = "가위 !"
+            comChoiceLabel.text = "가위 !"
         case .paper:
             comChoiceImage.image = #imageLiteral(resourceName: "paper")
-            comChoicePick.text = "보 !"
+            comChoiceLabel.text = "보 !"
         }
         
         switch myPick {
         case .rock:
             myChoiceImage.image = #imageLiteral(resourceName: "rock")
-            myChoicePick.text = "묵 !"
+            myChoiceLabel.text = "묵 !"
         case .scissors:
             myChoiceImage.image = #imageLiteral(resourceName: "scissors")
-            myChoicePick.text = "가위 !"
+            myChoiceLabel.text = "가위 !"
         case .paper:
             myChoiceImage.image = #imageLiteral(resourceName: "paper")
-            myChoicePick.text = "보 !"
+            myChoiceLabel.text = "보 !"
         }
         
         switch myPick {
@@ -99,8 +99,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
-        comChoicePick.text = "준비 중 🤯"
-        myChoicePick.text = "준비 중 🤯"
+        comChoiceLabel.text = "준비 중 🤯"
+        myChoiceLabel.text = "준비 중 🤯"
         
         comChoiceImage.image = #imageLiteral(resourceName: "ready")
         myChoiceImage.image = #imageLiteral(resourceName: "ready")
