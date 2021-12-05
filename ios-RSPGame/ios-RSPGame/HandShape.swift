@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Rsp: Int {
+enum HandShape: Int {
     case rock
     case scissors
     case paper

@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var comChoicePick: UILabel!
     @IBOutlet weak var myChoicePick: UILabel!
     
-    var myPick: Rsp = Rsp.paper
-    var comPick: Rsp = Rsp(rawValue: Int.random(in: 0...2))!
+    var myPick: HandShape = HandShape.paper
+    var comPick: HandShape = HandShape(rawValue: Int.random(in: 0...2))!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +32,11 @@ class ViewController: UIViewController {
         
         switch title {
         case "가위":
-            myPick = Rsp.scissors
+            myPick = HandShape.scissors
         case "바위":
-            myPick = Rsp.rock
+            myPick = HandShape.rock
         case "보":
-            myPick = Rsp.paper
+            myPick = HandShape.paper
         default:
             break
         }
