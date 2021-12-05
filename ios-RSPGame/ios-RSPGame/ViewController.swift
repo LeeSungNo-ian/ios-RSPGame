@@ -20,11 +20,13 @@ class ViewController: UIViewController {
     var myPick: HandShape = HandShape.paper
     var comPick: HandShape = HandShape(rawValue: Int.random(in: 0...2))!
     
+    var getReadyState: String = "준비 중 🤯"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        comChoiceLabel.text = "준비 중 🤯"
-        myChoiceLabel.text = "준비 중 🤯"
+        comChoiceLabel.text = getReadyState
+        myChoiceLabel.text = getReadyState
     }
     
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
@@ -45,26 +47,20 @@ class ViewController: UIViewController {
     @IBAction func selectButtonTapped(_ sender: UIButton) {
         switch comPick {
         case .rock:
-            comChoiceImage.image = #imageLiteral(resourceName: "rock")
-            comChoiceLabel.text = "묵 !"
+            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "rock"), "묵 !")
         case .scissors:
-            comChoiceImage.image = #imageLiteral(resourceName: "scissors")
-            comChoiceLabel.text = "가위 !"
+            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "scissors"), "가위 !")
         case .paper:
-            comChoiceImage.image = #imageLiteral(resourceName: "paper")
-            comChoiceLabel.text = "보 !"
+            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "paper"), "보 !")
         }
         
         switch myPick {
         case .rock:
-            myChoiceImage.image = #imageLiteral(resourceName: "rock")
-            myChoiceLabel.text = "묵 !"
+            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "rock"), "묵 !")
         case .scissors:
-            myChoiceImage.image = #imageLiteral(resourceName: "scissors")
-            myChoiceLabel.text = "가위 !"
+            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "scissors"), "가위 !")
         case .paper:
-            myChoiceImage.image = #imageLiteral(resourceName: "paper")
-            myChoiceLabel.text = "보 !"
+            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "paper"), "보 !")
         }
         
         switch myPick {
