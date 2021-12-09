@@ -8,5 +8,7 @@
 import Foundation
 
 struct ComputerOptionSelector {
-    
+    func SelectorComputerRandomOption() {
+        
+    }
 }
