@@ -45,6 +45,28 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
+        var resourceName: String {
+            switch computerRandomChoicePick {
+            case .rock:
+                return "rock"
+            case .scissors:
+                return "scissors"
+            case .paper:
+                return "paper"
+            }
+        }
+        
+        var handShapeName: String {
+            switch computerRandomChoicePick {
+            case .rock:
+                return "묵 !"
+            case .scissors:
+                return "가위 !"
+            case .paper:
+                return "보"
+            }
+        }
+    
         switch computerRandomChoicePick {
         case .rock:
             (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "rock"), "묵 !")
