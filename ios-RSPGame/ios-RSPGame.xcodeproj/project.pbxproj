@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C951F07275B9CA1000093EA /* HandShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C951F06275B9CA1000093EA /* HandShape.swift */; };
 		3C951F09275BADCB000093EA /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C951F08275BADCB000093EA /* GameResult.swift */; };
+		3CA8CFBD27624E0900FEC728 /* ComputerOptionSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA8CFBC27624E0900FEC728 /* ComputerOptionSelector.swift */; };
 		3CAE6A2B2757BAA100F20BCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE6A2A2757BAA100F20BCB /* AppDelegate.swift */; };
 		3CAE6A2D2757BAA100F20BCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE6A2C2757BAA100F20BCB /* SceneDelegate.swift */; };
 		3CAE6A2F2757BAA100F20BCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE6A2E2757BAA100F20BCB /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		3C951F06275B9CA1000093EA /* HandShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandShape.swift; sourceTree = "<group>"; };
 		3C951F08275BADCB000093EA /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
+		3CA8CFBC27624E0900FEC728 /* ComputerOptionSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerOptionSelector.swift; sourceTree = "<group>"; };
 		3CAE6A272757BAA100F20BCB /* ios-RSPGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-RSPGame.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAE6A2A2757BAA100F20BCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CAE6A2C2757BAA100F20BCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				3CAE6A2A2757BAA100F20BCB /* AppDelegate.swift */,
 				3CAE6A2C2757BAA100F20BCB /* SceneDelegate.swift */,
 				3CAE6A2E2757BAA100F20BCB /* ViewController.swift */,
+				3CA8CFBC27624E0900FEC728 /* ComputerOptionSelector.swift */,
 				3C951F08275BADCB000093EA /* GameResult.swift */,
 				3C951F06275B9CA1000093EA /* HandShape.swift */,
 				3CAE6A302757BAA100F20BCB /* Main.storyboard */,
@@ -148,6 +151,7 @@
 				3C951F07275B9CA1000093EA /* HandShape.swift in Sources */,
 				3CAE6A2B2757BAA100F20BCB /* AppDelegate.swift in Sources */,
 				3CAE6A2D2757BAA100F20BCB /* SceneDelegate.swift in Sources */,
+				3CA8CFBD27624E0900FEC728 /* ComputerOptionSelector.swift in Sources */,
 				3C951F09275BADCB000093EA /* GameResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
