@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var computerRandomChoicePick: HandShape = ComputerOptionSelector().SelectorComputerRandomOption()
     
     var loadingTitle: String = "준비 중 🤯"
+    var pleaseChoiceTitle: String = "선택하세요 !"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,20 +46,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        setImageTitle(pick: mySelectPickChoice)
         setImageTitle(pick: computerRandomChoicePick)
+        setImageTitle(pick: mySelectPickChoice)
         
         announceWhoWinner(myPick: mySelectPickChoice, comPick: computerRandomChoicePick)
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
-        comChoiceLabel.text = "준비 중 🤯"
-        myChoiceLabel.text = "준비 중 🤯"
+        comChoiceLabel.text = loadingTitle
+        myChoiceLabel.text = loadingTitle
         
         comChoiceImage.image = #imageLiteral(resourceName: "ready")
         myChoiceImage.image = #imageLiteral(resourceName: "ready")
         
-        mainLabel.text = "선택하세요 !"
+        mainLabel.text = pleaseChoiceTitle
     }
     
     private func setImageTitle(pick: HandShape) {
