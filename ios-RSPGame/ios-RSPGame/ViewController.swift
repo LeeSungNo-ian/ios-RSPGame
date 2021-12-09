@@ -20,13 +20,13 @@ class ViewController: UIViewController {
     var myPick: HandShape = HandShape.paper
     var comPick: HandShape = HandShape(rawValue: Int.random(in: 0...2))!
     
-    var getReadyState: String = "준비 중 🤯"
-    
+    var readyState: String = "준비 중 🤯"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        comChoiceLabel.text = getReadyState
-        myChoiceLabel.text = getReadyState
+        comChoiceLabel.text = readyState
+        myChoiceLabel.text = readyState
     }
     
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
