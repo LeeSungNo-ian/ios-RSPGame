@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myChoiceLabel: UILabel!
     
     var mySelectPickChoice: HandShape = HandShape.paper
-    var comPick: HandShape = ComputerOptionSelector().SelectorComputerRandomOption()
+    var computerRandomChoicePick: HandShape = ComputerOptionSelector().SelectorComputerRandomOption()
     
     var readyState: String = "준비 중 🤯"
 
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        switch comPick {
+        switch computerRandomChoicePick {
         case .rock:
             (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "rock"), "묵 !")
         case .scissors:
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         
         switch mySelectPickChoice {
         case .rock:
-            switch comPick {
+            switch computerRandomChoicePick {
             case .rock:
                 mainLabel.text = GameResult.draw.rawValue
             case .scissors:
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
                 mainLabel.text = GameResult.lose.rawValue
             }
         case .scissors:
-            switch comPick {
+            switch computerRandomChoicePick {
             case .rock:
                 mainLabel.text = GameResult.lose.rawValue
             case .scissors:
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
                 mainLabel.text = GameResult.win.rawValue
             }
         case .paper:
-            switch comPick {
+            switch computerRandomChoicePick {
             case .rock:
                 mainLabel.text = GameResult.win.rawValue
             case .scissors:
