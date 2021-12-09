@@ -48,35 +48,7 @@ class ViewController: UIViewController {
         setImageTitle(pick: mySelectPickChoice)
         setImageTitle(pick: computerRandomChoicePick)
         
-        switch mySelectPickChoice {
-        case .rock:
-            switch computerRandomChoicePick {
-            case .rock:
-                mainLabel.text = GameResult.draw.rawValue
-            case .scissors:
-                mainLabel.text = GameResult.win.rawValue
-            case .paper:
-                mainLabel.text = GameResult.lose.rawValue
-            }
-        case .scissors:
-            switch computerRandomChoicePick {
-            case .rock:
-                mainLabel.text = GameResult.lose.rawValue
-            case .scissors:
-                mainLabel.text = GameResult.draw.rawValue
-            case .paper:
-                mainLabel.text = GameResult.win.rawValue
-            }
-        case .paper:
-            switch computerRandomChoicePick {
-            case .rock:
-                mainLabel.text = GameResult.win.rawValue
-            case .scissors:
-                mainLabel.text = GameResult.lose.rawValue
-            case .paper:
-                mainLabel.text = GameResult.draw.rawValue
-            }
-        }
+        announceWhoWinner(myPick: mySelectPickChoice, comPick: computerRandomChoicePick)
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
@@ -119,8 +91,14 @@ class ViewController: UIViewController {
         }
     }
     
-    private func announceWinner() {
-        
+    private func announceWhoWinner(myPick: HandShape, comPick: HandShape) {
+        if myPick == comPick {
+            mainLabel.text = GameResult.draw.rawValue
+        } else if myPick == .rock && comPick == .scissors || myPick == .scissors && comPick == .paper || myPick == .paper && comPick == .rock {
+            mainLabel.text = GameResult.win.rawValue
+        } else {
+            mainLabel.text = GameResult.lose.rawValue
+        }
     }
 }
 
