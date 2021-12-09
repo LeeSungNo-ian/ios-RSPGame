@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myChoiceLabel: UILabel!
     
     var myPick: HandShape = HandShape.paper
-    var comPick: HandShape = HandShape(rawValue: Int.random(in: 0...2))!
+    var comPick: HandShape = ComputerOptionSelector().SelectorComputerRandomOption()
     
     var readyState: String = "준비 중 🤯"
 
