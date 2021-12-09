@@ -45,39 +45,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        var resourceName: String {
-            switch computerRandomChoicePick {
-            case .rock:
-                return "rock"
-            case .scissors:
-                return "scissors"
-            case .paper:
-                return "paper"
-            }
-        }
-        
-        var handShapeName: String {
-            switch computerRandomChoicePick {
-            case .rock:
-                return "묵 !"
-            case .scissors:
-                return "가위 !"
-            case .paper:
-                return "보"
-            }
-        }
-    
-        (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
-        
-        
-        switch mySelectPickChoice {
-        case .rock:
-            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "rock"), "묵 !")
-        case .scissors:
-            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "scissors"), "가위 !")
-        case .paper:
-            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "paper"), "보 !")
-        }
+        setImageTitle(pick: mySelectPickChoice)
+        setImageTitle(pick: computerRandomChoicePick)
         
         switch mySelectPickChoice {
         case .rock:
@@ -148,6 +117,10 @@ class ViewController: UIViewController {
         } else {
             (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
         }
+    }
+    
+    private func announceWinner() {
+        
     }
 }
 
