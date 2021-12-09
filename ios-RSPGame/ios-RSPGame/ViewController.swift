@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var comChoiceLabel: UILabel!
     @IBOutlet weak var myChoiceLabel: UILabel!
     
-    var myPick: HandShape = HandShape.paper
+    var mySelectPickChoice: HandShape = HandShape.paper
     var comPick: HandShape = ComputerOptionSelector().SelectorComputerRandomOption()
     
     var readyState: String = "준비 중 🤯"
@@ -34,11 +34,11 @@ class ViewController: UIViewController {
         
         switch title {
         case "가위":
-            myPick = HandShape.scissors
+            mySelectPickChoice = HandShape.scissors
         case "바위":
-            myPick = HandShape.rock
+            mySelectPickChoice = HandShape.rock
         case "보":
-            myPick = HandShape.paper
+            mySelectPickChoice = HandShape.paper
         default:
             break
         }
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
             (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "paper"), "보 !")
         }
         
-        switch myPick {
+        switch mySelectPickChoice {
         case .rock:
             (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "rock"), "묵 !")
         case .scissors:
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
             (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "paper"), "보 !")
         }
         
-        switch myPick {
+        switch mySelectPickChoice {
         case .rock:
             switch comPick {
             case .rock:
