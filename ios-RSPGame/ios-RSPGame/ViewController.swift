@@ -67,14 +67,8 @@ class ViewController: UIViewController {
             }
         }
     
-        switch computerRandomChoicePick {
-        case .rock:
-            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "rock"), "묵 !")
-        case .scissors:
-            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "scissors"), "가위 !")
-        case .paper:
-            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "paper"), "보 !")
-        }
+        (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
+        
         
         switch mySelectPickChoice {
         case .rock:
@@ -124,6 +118,10 @@ class ViewController: UIViewController {
         myChoiceImage.image = #imageLiteral(resourceName: "ready")
         
         mainLabel.text = "선택하세요 !"
+    }
+    
+    private func setImageTitle() {
+        
     }
 }
 
