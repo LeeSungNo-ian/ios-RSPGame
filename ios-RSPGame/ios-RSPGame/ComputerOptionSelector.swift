@@ -8,7 +8,11 @@
 import Foundation
 
 struct ComputerOptionSelector {
-    func SelectorComputerRandomOption() {
-        
+    func SelectorComputerRandomOption() -> HandShape {
+        let randomNumber = Int.random(in: 0...2)
+        if let computerRandomHandShape = HandShape(rawValue: randomNumber) {
+            return computerRandomHandShape
+        }
+        return HandShape.paper
     }
 }
