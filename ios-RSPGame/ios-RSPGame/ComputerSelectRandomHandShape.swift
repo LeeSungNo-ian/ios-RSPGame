@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ComputerOptionSelector {
+struct ComputerSelectRandomHandShape {
     func SelectorComputerRandomOption() -> HandShape {
         let randomNumber = Int.random(in: 0...2)
         if let computerRandomHandShape = HandShape(rawValue: randomNumber) {
