@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var computerRandomChoicePick: HandShape = ComputerSelectRandomHandShape().computerRandomOptionSelector()
     
     var loadingMessage: String = "준비 중 🤯"
-    var pleaseChoiceTitle: String = "선택하세요 !"
+    var pleaseChoiceMessage: String = "선택하세요 !"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         comChoiceImage.image = #imageLiteral(resourceName: "ready")
         myChoiceImage.image = #imageLiteral(resourceName: "ready")
         
-        mainLabel.text = pleaseChoiceTitle
+        mainLabel.text = pleaseChoiceMessage
     }
     
     private func setImageTitle(pick: HandShape) {
