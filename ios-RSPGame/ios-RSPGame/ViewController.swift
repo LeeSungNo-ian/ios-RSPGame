@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myChoiceLabel: UILabel!
     
     var mySelectPickChoice: HandShape = HandShape.paper
-    var computerRandomChoicePick: HandShape = ComputerSelectRandomHandShape().SelectorComputerRandomOption()
+    var computerRandomChoicePick: HandShape = ComputerSelectRandomHandShape().computerRandomOptionSelector()
     
     var loadingTitle: String = "준비 중 🤯"
     var pleaseChoiceTitle: String = "선택하세요 !"
