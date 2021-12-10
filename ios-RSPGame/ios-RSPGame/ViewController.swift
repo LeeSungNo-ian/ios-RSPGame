@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var comChoiceLabel: UILabel!
     @IBOutlet weak var myChoiceLabel: UILabel!
     
-    var mySelectPickChoice: HandShape = HandShape.paper
-    var computerRandomChoicePick: HandShape = ComputerSelectRandomHandShape().computerRandomOptionSelector()
+    var mySelectHandShape: HandShape = HandShape.paper
+    var comSelectHandShape: HandShape = ComputerSelectRandomHandShape().computerRandomOptionSelector()
     
     var loadingMessage: String = "준비 중 🤯"
     var pleaseChoiceMessage: String = "선택하세요 !"
@@ -35,21 +35,21 @@ class ViewController: UIViewController {
         
         switch title {
         case "가위":
-            mySelectPickChoice = HandShape.scissors
+            mySelectHandShape = HandShape.scissors
         case "바위":
-            mySelectPickChoice = HandShape.rock
+            mySelectHandShape = HandShape.rock
         case "보":
-            mySelectPickChoice = HandShape.paper
+            mySelectHandShape = HandShape.paper
         default:
             break
         }
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        setImageTitle(pick: computerRandomChoicePick)
-        setImageTitle(pick: mySelectPickChoice)
+        setImageTitle(pick: comSelectHandShape)
+        setImageTitle(pick: mySelectHandShape)
         
-        announceWhoWinner(myPick: mySelectPickChoice, comPick: computerRandomChoicePick)
+        announceWhoWinner(myPick: mySelectHandShape, comPick: comSelectHandShape)
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
             }
         }
         
-        if pick == computerRandomChoicePick {
+        if pick == comSelectHandShape {
             (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
         } else {
             (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
