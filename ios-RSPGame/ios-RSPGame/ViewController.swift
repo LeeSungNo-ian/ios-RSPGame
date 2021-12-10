@@ -20,14 +20,14 @@ class ViewController: UIViewController {
     var mySelectPickChoice: HandShape = HandShape.paper
     var computerRandomChoicePick: HandShape = ComputerSelectRandomHandShape().computerRandomOptionSelector()
     
-    var loadingTitle: String = "준비 중 🤯"
+    var loadingMessage: String = "준비 중 🤯"
     var pleaseChoiceTitle: String = "선택하세요 !"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        comChoiceLabel.text = loadingTitle
-        myChoiceLabel.text = loadingTitle
+        comChoiceLabel.text = loadingMessage
+        myChoiceLabel.text = loadingMessage
     }
     
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
@@ -53,8 +53,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
-        comChoiceLabel.text = loadingTitle
-        myChoiceLabel.text = loadingTitle
+        comChoiceLabel.text = loadingMessage
+        myChoiceLabel.text = loadingMessage
         
         comChoiceImage.image = #imageLiteral(resourceName: "ready")
         myChoiceImage.image = #imageLiteral(resourceName: "ready")
