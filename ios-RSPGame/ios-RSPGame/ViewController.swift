@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     var loadingMessage: String = "준비 중 🤯"
     var pleaseChoiceMessage: String = "선택하세요 !"
+    var loadingImage: UIImage = #imageLiteral(resourceName: "ready")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +57,8 @@ class ViewController: UIViewController {
         comChoiceLabel.text = loadingMessage
         myChoiceLabel.text = loadingMessage
         
-        comChoiceImage.image = #imageLiteral(resourceName: "ready")
-        myChoiceImage.image = #imageLiteral(resourceName: "ready")
+        comChoiceImage.image = loadingImage
+        myChoiceImage.image = loadingImage
         
         mainLabel.text = pleaseChoiceMessage
     }
