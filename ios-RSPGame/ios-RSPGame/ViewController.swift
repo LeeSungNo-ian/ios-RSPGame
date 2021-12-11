@@ -17,16 +17,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var comChoiceLabel: UILabel!
     @IBOutlet weak var myChoiceLabel: UILabel!
     
-    var myPick: HandShape = HandShape.paper
-    var comPick: HandShape = HandShape(rawValue: Int.random(in: 0...2))!
+    var mySelectHandShape: HandShape = HandShape.paper
+    var comSelectHandShape: HandShape = ComputerSelectRandomHandShape().computerRandomOptionSelector()
     
-    var getReadyState: String = "준비 중 🤯"
-    
+    var loadingMessage: String = "준비 중 🤯"
+    var pleaseChoiceMessage: String = "선택하세요 !"
+    var loadingImage: UIImage = #imageLiteral(resourceName: "ready")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        comChoiceLabel.text = getReadyState
-        myChoiceLabel.text = getReadyState
+        comChoiceLabel.text = loadingMessage
+        myChoiceLabel.text = loadingMessage
     }
     
     @IBAction func rpsButtonTapped(_ sender: UIButton) {
@@ -34,74 +36,71 @@ class ViewController: UIViewController {
         
         switch title {
         case "가위":
-            myPick = HandShape.scissors
+            mySelectHandShape = HandShape.scissors
         case "바위":
-            myPick = HandShape.rock
+            mySelectHandShape = HandShape.rock
         case "보":
-            myPick = HandShape.paper
+            mySelectHandShape = HandShape.paper
         default:
             break
         }
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        switch comPick {
-        case .rock:
-            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "rock"), "묵 !")
-        case .scissors:
-            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "scissors"), "가위 !")
-        case .paper:
-            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: "paper"), "보 !")
-        }
+        setImageTitle(pick: comSelectHandShape)
+        setImageTitle(pick: mySelectHandShape)
         
-        switch myPick {
-        case .rock:
-            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "rock"), "묵 !")
-        case .scissors:
-            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "scissors"), "가위 !")
-        case .paper:
-            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: "paper"), "보 !")
-        }
-        
-        switch myPick {
-        case .rock:
-            switch comPick {
-            case .rock:
-                mainLabel.text = GameResult.draw.rawValue
-            case .scissors:
-                mainLabel.text = GameResult.win.rawValue
-            case .paper:
-                mainLabel.text = GameResult.lose.rawValue
-            }
-        case .scissors:
-            switch comPick {
-            case .rock:
-                mainLabel.text = GameResult.lose.rawValue
-            case .scissors:
-                mainLabel.text = GameResult.draw.rawValue
-            case .paper:
-                mainLabel.text = GameResult.win.rawValue
-            }
-        case .paper:
-            switch comPick {
-            case .rock:
-                mainLabel.text = GameResult.win.rawValue
-            case .scissors:
-                mainLabel.text = GameResult.lose.rawValue
-            case .paper:
-                mainLabel.text = GameResult.draw.rawValue
-            }
-        }
+        announceWhoWinner(myPick: mySelectHandShape, comPick: comSelectHandShape)
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
-        comChoiceLabel.text = "준비 중 🤯"
-        myChoiceLabel.text = "준비 중 🤯"
+        comChoiceLabel.text = loadingMessage
+        myChoiceLabel.text = loadingMessage
         
-        comChoiceImage.image = #imageLiteral(resourceName: "ready")
-        myChoiceImage.image = #imageLiteral(resourceName: "ready")
+        comChoiceImage.image = loadingImage
+        myChoiceImage.image = loadingImage
         
-        mainLabel.text = "선택하세요 !"
+        mainLabel.text = pleaseChoiceMessage
+    }
+    
+    private func setImageTitle(pick: HandShape) {
+        var resourceName: String {
+            switch pick {
+            case .rock:
+                return "rock"
+            case .scissors:
+                return "scissors"
+            case .paper:
+                return "paper"
+            }
+        }
+        
+        var handShapeName: String {
+            switch pick {
+            case .rock:
+                return "묵 !"
+            case .scissors:
+                return "가위 !"
+            case .paper:
+                return "보"
+            }
+        }
+        
+        if pick == comSelectHandShape {
+            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
+        } else {
+            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
+        }
+    }
+    
+    private func announceWhoWinner(myPick: HandShape, comPick: HandShape) {
+        if myPick == comPick {
+            mainLabel.text = GameResult.draw.rawValue
+        } else if myPick == .rock && comPick == .scissors || myPick == .scissors && comPick == .paper || myPick == .paper && comPick == .rock {
+            mainLabel.text = GameResult.win.rawValue
+        } else {
+            mainLabel.text = GameResult.lose.rawValue
+        }
     }
 }
 
