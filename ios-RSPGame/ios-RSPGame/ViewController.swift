@@ -63,29 +63,8 @@ class ViewController: UIViewController {
         mainLabel.text = pleaseChoiceMessage
     }
     
-    private func setImageTitle(pick: HandShape) {
-        var resourceName: String {
-            switch pick {
-            case .rock:
-                return "rock"
-            case .scissors:
-                return "scissors"
-            case .paper:
-                return "paper"
-            }
-        }
-        
-        var handShapeName: String {
-            switch pick {
-            case .rock:
-                return "묵 !"
-            case .scissors:
-                return "가위 !"
-            case .paper:
-                return "보"
-            }
-        }
-        
+    private func setImageTitle(comPick: HandShape, myPick: HandShape) {
+               
         if pick == comSelectHandShape {
             (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
         } else if pick == mySelectHandShape {
