@@ -63,7 +63,20 @@ class ViewController: UIViewController {
         mainLabel.text = pleaseChoiceMessage
     }
     
-    private func setImageTitle(pick: HandShape) {
+    private func setImageTitle(comPick: HandShape, myPick: HandShape) {
+        let comResourceName: String
+        let myResourceName: String
+        let comHandShapeName: String
+        let myHandShapeName: String
+        
+        (comResourceName, comHandShapeName) = self.resourceHandShapeName(of: comPick)
+        (myResourceName, myHandShapeName) = self.resourceHandShapeName(of: myPick)
+        
+        (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: comResourceName), comHandShapeName)
+        (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: myResourceName), myHandShapeName)
+    }
+    
+    private func resourceHandShapeName(of pick: HandShape) -> (String, String){
         var resourceName: String {
             switch pick {
             case .rock:
@@ -86,11 +99,7 @@ class ViewController: UIViewController {
             }
         }
         
-        if pick == comSelectHandShape {
-            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
-        } else {
-            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
-        }
+        return (resourceName, handShapeName)
     }
     
     private func announceWhoWinner(myPick: HandShape, comPick: HandShape) {
