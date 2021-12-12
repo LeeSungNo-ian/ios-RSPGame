@@ -93,8 +93,30 @@ class ViewController: UIViewController {
         }
     }
     
-    private func resourceHandShapeName() {
+    private func resourceHandShapeName(of pick: HandShape) -> (String, String){
+        var resourceName: String {
+            switch pick {
+            case .rock:
+                return "rock"
+            case .scissors:
+                return "scissors"
+            case .paper:
+                return "paper"
+            }
+        }
         
+        var handShapeName: String {
+            switch pick {
+            case .rock:
+                return "묵 !"
+            case .scissors:
+                return "가위 !"
+            case .paper:
+                return "보"
+            }
+        }
+        
+        return (resourceName, handShapeName)
     }
     
     private func announceWhoWinner(myPick: HandShape, comPick: HandShape) {
