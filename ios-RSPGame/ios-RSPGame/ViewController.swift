@@ -64,12 +64,16 @@ class ViewController: UIViewController {
     }
     
     private func setImageTitle(comPick: HandShape, myPick: HandShape) {
-               
-        if pick == comSelectHandShape {
-            (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
-        } else if pick == mySelectHandShape {
-            (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
-        }
+        let comResourceName: String
+        let myResourceName: String
+        let comHandShapeName: String
+        let myHandShapeName: String
+        
+        (comResourceName, comHandShapeName) = self.resourceHandShapeName(of: comPick)
+        (myResourceName, myHandShapeName) = self.resourceHandShapeName(of: myPick)
+        
+        (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: comResourceName), comHandShapeName)
+        (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: myResourceName), myHandShapeName)
     }
     
     private func resourceHandShapeName(of pick: HandShape) -> (String, String){
