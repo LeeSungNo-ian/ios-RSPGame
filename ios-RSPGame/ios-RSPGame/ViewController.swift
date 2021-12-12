@@ -88,9 +88,13 @@ class ViewController: UIViewController {
         
         if pick == comSelectHandShape {
             (comChoiceImage.image, comChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
-        } else {
+        } else if pick == mySelectHandShape {
             (myChoiceImage.image, myChoiceLabel.text) = (#imageLiteral(resourceName: resourceName), handShapeName)
         }
+    }
+    
+    private func resourceHandShapeName() {
+        
     }
     
     private func announceWhoWinner(myPick: HandShape, comPick: HandShape) {
