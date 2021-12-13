@@ -47,11 +47,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        setImageTitle(pick: comSelectHandShape)
-        setImageTitle(pick: mySelectHandShape)
-        
+        setImageTitle(comPick: comSelectHandShape, myPick: mySelectHandShape)
         announceWhoWinner(myPick: mySelectHandShape, comPick: comSelectHandShape)
-    }
+    } 
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         comChoiceLabel.text = loadingMessage
@@ -61,7 +59,7 @@ class ViewController: UIViewController {
         myChoiceImage.image = loadingImage
         
         mainLabel.text = pleaseChoiceMessage
-    }
+}
     
     private func setImageTitle(pick: HandShape) {
         var resourceName: String {
