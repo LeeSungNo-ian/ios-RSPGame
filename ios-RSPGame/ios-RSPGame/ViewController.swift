@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//
         comImageView.image = #imageLiteral(resourceName: "ready")
         myImageView.image = #imageLiteral(resourceName: "ready")
         
