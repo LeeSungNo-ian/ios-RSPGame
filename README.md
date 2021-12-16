@@ -75,7 +75,9 @@ private func setImageTitle(pick: HandShape) {
 
 매개변수 `pick` 에 `mySelectHandShape` 가 들어갈 때와 `comSelectHandShape` 가 들어갈 때의 경우를 `if` 구문으로 구현했습니다.
 
-여기서 간과한 부분은 `pick` 에 `mySelectHandShape` 과 `comSelectHandShape` 의 `String` 값이 들어가 구별하는게 아니고, 실제 값을 비교하는 것이였습니다.
+`LLDB` 를 사용하여 `mySelectHandShape` 의 값을 확인해봤지만 무승부일 땐 `nil` 로 값이 보여졌습니다.
+
+여기서 간과한 부분을 깨달았습니다. `pick` 에 `mySelectHandShape` 과 `comSelectHandShape` 의 `String` 값이 들어가 구별하는게 아니고, 실제 값을 비교하는 것이였습니다.
 
 예시로 코드로
 ```swift
