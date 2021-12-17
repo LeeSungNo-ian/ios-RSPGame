@@ -31,6 +31,8 @@
 
 ## 앱 세부사항 
 1. `enum` 과 `enum rawValue` 를 사용해, 컴퓨터가 랜덤값을 쉽게 정할 수 있게 했습니다.
+  * 원시값이라고 불리는 기본값을 각각의 case에 부여할 수 있습니다.
+  * case와 1대1로 매칭되는 값입니다.
 2. `private` 를 사용해 접근 제한자를 사용했습니다.
 3. `옵셔널 바인딩` 을 사용했습니다. 
  
@@ -118,4 +120,14 @@ private func setImageTitle(comPick: HandShape, myPick: HandShape) {
 ```
 
 로 Refactor 하여 트러블 슈팅했습니다 !
+
+## 배운점과 느낀점
+* 중복되는 코드가 반복 됐을 때, 최대한 간결하고 이쁜 코드를 만들기 위해 노력해봤어요 !
+* 변수, 함수 등을 만들때 누구나 알 수 있는 네이밍을 만들기 위해 노력했습니다 !
+* 은닉화를 위한 `private` 를 알게 됐어요 ! 
+* `enum` 의 원시값을 알게 됐습니다 !
+
+## 과제하면서 공부한 내용
+
+[옵셔널](https://developer.apple.com/documentation/swift/optional/)
 
